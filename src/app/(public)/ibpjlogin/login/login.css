@@ -1,0 +1,620 @@
+* {
+  outline: none;
+}
+
+body {
+  background-color: #e4e4e4;
+  color: #333;
+  font-family: Tahoma, Arial, Sans-Serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font: 0.75em / 120% Tahoma, Arial, Sans-Serif;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.topo {
+  color: #333;
+  font-family: Tahoma, Arial, Sans-Serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.92em;
+  height: 137px;
+  width: 100%;
+}
+
+.direita {
+  color: #333;
+  font-family: Tahoma, Arial, Sans-Serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 0.92em;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 143px;
+  width: 847px;
+}
+
+.headerTitulo {
+  color: #333;
+  font-family: Tahoma, Arial, Sans-Serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 0.92em;
+  outline: none;
+}
+
+.headerTitulo_text {
+  font-family: Tahoma, Arial, Sans-Serif;
+  font-style: normal;
+  font-variant: normal;
+  outline: none;
+  margin: 0;
+  font-weight: normal;
+  color: #bf0000;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+  padding-left: 42px;
+  font-size: 2em;
+}
+
+.btCancelar_acessoVarejo {
+  font-family: Tahoma, Arial, Sans-Serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 0.92em;
+  list-style: none;
+  line-height: 28px;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #333;
+  background: url("/images/btn_cancelar_acesso.gif") no-repeat scroll 0 0
+    transparent;
+  display: block;
+  text-indent: -9999px;
+  width: 164px;
+}
+
+.input_text {
+  font-family: Tahoma, Arial, Sans-Serif;
+  border-bottom: 1px solid #d4d4d4;
+  border-right: 1px solid #d4d4d4;
+  border-left: 1px solid #7a7a7a;
+  border-top: 1px solid #7a7a7a;
+  padding: 2px;
+  background: #f4f4f4;
+  font-size: 1em;
+}
+
+.topo .login_title2 {
+  width: 855px;
+  height: 64px;
+  clear: both;
+  border-top-color: #ccc;
+  border-right-color: #ccc;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  background-image: none;
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-color: rgb(255, 255, 255);
+}
+
+.login_title2 h1 {
+  color: #bf0000;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+  padding-left: 42px;
+  font-size: 2em !important;
+}
+
+.login_title2 h2 {
+  color: #000000;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 42px;
+}
+
+.btCancelarAcesso {
+  font-family: Tahoma, Arial, Sans-Serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 0.92em;
+  list-style: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  line-height: 28px;
+  color: #fff;
+}
+
+.login_title2 h2 {
+  color: #000000;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 42px;
+  font-size: 1.33em;
+}
+
+.miolo {
+  width: 985px;
+  margin: 21px 0 15px 14px !important;
+  padding: 0;
+}
+
+.conteudo {
+  float: left !important;
+  background: url("/images/pix_fill.gif") repeat-x scroll left bottom #ffffff;
+  position: relative;
+  width: 750px;
+}
+
+.topo_canto_L {
+  background: transparent url("/images/bgr_canto_top_branco.jpg") left 0
+    no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+}
+
+.topo_canto_R {
+  background: transparent url("/images/bgr_canto_top_branco.jpg") right 0
+    no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+}
+
+.miolo .top {
+  background: url("/images/bgr_miolo.gif") top left no-repeat;
+  padding: 20px;
+  min-height: 480px;
+  width: 100%;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.bgt {
+  display: block;
+  height: 14px;
+  background: url("/images/bgr_boxtp1_top.jpg") top left repeat-x;
+}
+
+.bgb {
+  display: block;
+  height: 14px;
+  clear: both;
+  background: url("/images/bgr_boxtp1_bottom.jpg") top left repeat-x;
+}
+
+.iframe {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.conteudo .miolo .top .boxTp {
+  border-bottom: solid 1px #cf3f3f;
+  border-top: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  border-left: solid 1px #ccc;
+  zoom: 1;
+  overflow: hidden;
+  width: 710px;
+  display: block;
+  height: 14px;
+  background: url("/images/bgr_boxtp1_top.jpg") top left repeat-x;
+}
+
+.passo {
+  float: left;
+  width: 20px;
+  text-align: center;
+  background: #cc092f;
+  padding: 5px 0;
+  color: white;
+  font-weight: bold;
+  margin-left: -1px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.imgAlert {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.btnCancelarAcesso {
+  display: block;
+  height: 20px;
+  background: url("/botoes/btns_acesso.jpg") 0px 0px no-repeat;
+}
+
+.box-direita {
+  display: block;
+  float: right;
+  width: 217px;
+}
+
+.box-direita .box {
+  background: url("/images/box_dir_top.gif") no-repeat scroll left top #f3f3f3;
+  padding-top: 6px;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.bt0 {
+  border-top: 0 !important;
+}
+.btos_bottom {
+  float: right;
+  border-top: 0 none !important;
+}
+.btos_bottom li {
+  float: left;
+}
+.bt_avancar,
+.bt_enviar {
+  background: url("/botoes/btn_geral.gif") 0 0 no-repeat;
+  float: left;
+  width: 79px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  text-indent: -9999px;
+  padding: 0 !important;
+}
+.bt_enviar {
+  background-position: 0 -309px;
+  margin-right: 15px;
+  width: 60px;
+}
+.btnCancelarAcesso {
+  background-position: 0 0px;
+  width: 118px;
+  text-indent: -999999px;
+}
+
+/* FOOTER  */
+
+.after:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+.footer {
+  background: #d6d6d6 url("/images/bgr_rodape.jpg") 0 0 repeat-x;
+}
+
+.listaLogosImg {
+  background-image: url("/images/ico_selos.gif");
+  background-repeat: no-repeat;
+  display: block;
+  height: 100%;
+  background-position: 0 0;
+  width: 115px;
+  height: 31px;
+  margin-right: 21px;
+}
+
+#rodape {
+  background: #d6d6d6 url("/images/bgr_rodape.jpg") 0 0 repeat-x;
+  border-color: #c3c3c3;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+}
+#rodape .listaLogos {
+  background-color: #fff;
+  padding: 12px 0px 0px 22px;
+  float: left;
+  border-left: 1px #c3c3c3 solid;
+}
+#rodape .listaLogos li {
+  height: 41px;
+  float: left;
+}
+#rodape .listaLogos li a {
+  background-image: url("/images/ico_selos.gif");
+  background-repeat: no-repeat;
+  display: block;
+  height: 100%;
+  text-indent: -9999px;
+}
+#rodape .listaLogos li.item1 a {
+  background-position: 0 0;
+  height: 31px;
+  margin-right: 21px;
+  width: 115px;
+}
+#rodape .listaLogos li.item2 a {
+  background: none !important;
+}
+#rodape .listaMenuInferior {
+  border-color: #c3c3c3;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  float: right;
+}
+#rodape .listaTelefones {
+  background-color: #fff;
+  border-color: #c3c3c3;
+  border-style: solid;
+  border-width: 0 1px;
+  font-size: 100%;
+  float: right;
+  padding: 5px 0;
+  float: left;
+}
+#rodape .listaTelefones li {
+  color: #000;
+  float: left;
+  line-height: 14px;
+  padding: 6px 0 7px 0;
+  text-align: center;
+}
+#rodape .listaTelefones li.item1 {
+  width: 192px;
+}
+#rodape .listaTelefones li.item2 {
+  border-color: #c3c3c3;
+  border-style: solid;
+  border-width: 0 1px;
+  width: 187px;
+}
+#rodape .listaTelefones li.item3 {
+  width: 192px;
+}
+#rodape .listaTelefones li.item4 {
+  width: 192px;
+  border-left: #c3c3c3;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+#rodape .listaTelefones li span {
+  color: #333;
+  display: block;
+}
+#rodape.login .listaTelefones {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#rodape .miolo_footer {
+  padding-left: 15px;
+}
+#rodape .listaTelefones li.item1 {
+  width: 202px !important;
+}
+#rodape .listaTelefones li.item2 {
+  width: 197px !important;
+}
+#rodape .listaTelefones li.item3 {
+  width: 202px !important;
+}
+#rodape .listaTelefones li.item4 {
+  width: 202px !important;
+}
+
+.inputTextiToken {
+  display: block;
+  background: url("/images/input_text.gif") top left no-repeat;
+  width: 75px;
+  height: 19px;
+  padding-top: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.icoTip {
+  background: url("/images/ico_tip.gif") no-repeat;
+  text-indent: -9999px;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 4px 0 0 5px;
+}
+
+.box-confirma {
+  background: url("/images/ico_confirma.gif") no-repeat 20px center #fff3cb;
+  border: 1px solid #e0d9bb;
+  color: #333333;
+}
+
+.box-alert {
+  background: url("/images/ico_alert.gif") no-repeat 20px center #fff3cb;
+  border: 1px solid #e0d9bb;
+  color: #333333;
+}
+
+.ctn-box {
+  background: url("/images/bgr_boxAviso.gif") no-repeat scroll right bottom
+    transparent;
+  left: 1px;
+  padding: 13px 25px 15px 55px;
+  position: relative;
+  top: 1px;
+}
+
+.bt_confirmar {
+  background-position: 0 -60px;
+  width: 83px;
+}
+
+.bt_importaConfig,
+.btnSalvarConfiguracoes,
+.btoAlterar,
+.bt_LiConcordo,
+.bt_Nao,
+.bt_Sim,
+.bt_imprimir,
+.bt_Assinar,
+.btoExcluir,
+.bt_avancar,
+.bt_cancelar,
+.bt_limpar,
+.bt_autorizar,
+.bt_confirmar,
+.bt_solicitar,
+.bt_ok,
+.bt_voltar,
+.bt_fechar,
+.bto_fechar,
+.btnVisualizarArquivo,
+.btnExtrairExtrato,
+.btnExportarArquivo,
+.bt_atualizar,
+.btnAplicar,
+.btnCancelarAplicacao,
+.btnCancelarResgate,
+.btnResgateParcial,
+.btnResgateTotal,
+.btnAlterarUsuario,
+.bt_pagar,
+.bt_care,
+.bt_consultar,
+.btnAddFavorecido,
+.btnAddOutroFavorecido,
+.bt_salvar,
+.bt_enviar,
+.bto_imprimir {
+  background: url("/botoes/btn_geral.gif") 0 0 no-repeat;
+  float: left;
+  width: 79px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  text-indent: -9999px;
+  padding: 0 !important;
+}
+
+.btnAcessar,
+.btnCancelarAcesso {
+  display: block;
+  height: 20px;
+  background: url("/botoes/btns_acesso.jpg") 0px 0px no-repeat;
+}
+
+.btnAcessar {
+  width: 77px;
+  background-position: -133px 0;
+  margin-left: 10px;
+  text-indent: -999999px;
+}
+
+.btnCancelarAcesso {
+  background-position: 0 0px;
+  width: 118px;
+  text-indent: -999999px;
+}
+
+.erroOn {
+  font-size: 11px;
+  background: #fff3cb !important;
+  border: dashed 1px #cc092f !important;
+}
+
+.erroOn .txtErro {
+  display: block;
+  color: #cc092f;
+  padding-bottom: 10px;
+  font-size: 11px;
+  line-height: 13.2px;
+}
+
+.loader {
+  background: url("/images/ajax-loader.gif") no-repeat scroll 0 0 transparent;
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+@font-face {
+  font-family: "systemBase";
+  src: url("../../../../fonts/system-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "systemBase";
+  src: url("../../../../fonts/system-normal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "systemBase";
+  src: url("../../../../fonts/system-sm.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "systemBase";
+  src: url("../../../../fonts/system-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
