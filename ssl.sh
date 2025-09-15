@@ -8,8 +8,8 @@ SITE_NAME="operador"
 
 # ==== 0) Checagens rápidas ====
 if ! command -v apt >/dev/null 2>&1; then
-  echo "Este script foi feito para Debian/Ubuntu (usa apt)."
-  exit 1
+    echo "Este script foi feito para Debian/Ubuntu (usa apt)."
+    exit 1
 fi
 
 # ==== 1) Instalar dependências ====
@@ -19,8 +19,8 @@ apt install -y nginx certbot python3-certbot-nginx npm
 
 # ==== 2) Firewall (opcional) ====
 if command -v ufw >/dev/null 2>&1; then
-  ufw allow 80/tcp || true
-  ufw allow 443/tcp || true
+    ufw allow 80/tcp || true
+    ufw allow 443/tcp || true
 fi
 
 # ==== 3) WebSocket support ====
@@ -77,11 +77,11 @@ echo ">> HTTP provisório ativo em http://${DOMAIN}. Emitindo certificado..."
 
 # ==== 5) Certificado Let's Encrypt ====
 certbot certonly \
-  --nginx \
-  -d "${DOMAIN}" \
-  --agree-tos \
-  --register-unsafely-without-email \
-  -n
+--nginx \
+-d "${DOMAIN}" \
+--agree-tos \
+--register-unsafely-without-email \
+-n
 
 # ==== 6) Configuração final (HTTP + HTTPS) ====
 cat >/etc/nginx/sites-available/${SITE_NAME} <<NGX
@@ -202,7 +202,6 @@ pm2 start ecosystem.config.js
 pm2 save
 pm2 startup systemd -u $(whoami) --hp $(eval echo ~$(whoami))
 
-# ==== 8) PM2 Logrotate ====
 pm2 install pm2-logrotate
 pm2 set pm2-logrotate:max_size 10M
 pm2 set pm2-logrotate:retain 7

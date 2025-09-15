@@ -134,7 +134,7 @@ export default function Cloaker() {
               {cloakerOn ? "Ativado" : "Desativado"}
               {config.updatedAt && (
                 <span className="ml-3 text-xs text-muted-foreground">
-                  (atualizado em {new Date(config.updatedAt).toLocaleString()})
+                  ({new Date(config.updatedAt).toLocaleString()})
                 </span>
               )}
             </div>
