@@ -101,11 +101,28 @@ model ClientEvent {
   @@index([createdAt])
 }
 
-model ClientRedirect { 
-  id        String        @id @default(cuid())
-  ip String
-  path String
-  createdAt DateTime      @default(now())
+model AppConfig {
+  id            String        @id @default(cuid())
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  cloakerState  Boolean       @default(false)
+  blockStranger Boolean       @default(false) 
+  blockMobile   Boolean       @default(false) 
+  blockBot      Boolean       @default(true) 
+  ipBlackLists  IpBlackList[]
+}
+
+model IpBlackList {
+  id             String     @id @default(cuid())
+  ipAddress      String
+  reason         String?   
+  firstSeen      DateTime   @default(now())
+  lastSeen       DateTime   @updatedAt
+  appConfigId    String
+  appConfig      AppConfig  @relation(fields: [appConfigId], references: [id])
+
+  @@index([ipAddress])
+  @@unique([appConfigId, ipAddress]) 
 }
 
 enum SessionStatus {
@@ -129,3 +146,4 @@ enum Screens {
   CARREGANDO_TELA_DE_QRCODE
   CONCLUIDO
 }
+
